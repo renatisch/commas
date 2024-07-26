@@ -6,7 +6,6 @@ import os, dotenv
 
 dotenv.load_dotenv()
 
-
 host = os.environ.get("host")
 port = os.environ.get("port")
 database = os.environ.get("database")
