@@ -12,7 +12,7 @@ def export_data():
     print(f"Finished exporting data at {datetime.datetime.now()}")
 
 
-schedule.every(10).minutes.do(export_data)
+schedule.every(10).seconds.do(export_data)
 while True:
     schedule.run_pending()
     time.sleep(1)
