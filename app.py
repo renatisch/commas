@@ -5,14 +5,18 @@ import dotenv, datetime, time, schedule
 dotenv.load_dotenv()
 
 
-def export_data():
-    print(f"Started exporting data at {datetime.datetime.now()}")
-    get_bots_info()
-    get_deals_info()
-    print(f"Finished exporting data at {datetime.datetime.now()}")
+def ping():
+    print("ping")
 
 
-schedule.every(10).seconds.do(export_data)
+# def export_data():
+#     print(f"Started exporting data at {datetime.datetime.now()}")
+#     get_bots_info()
+#     get_deals_info()
+#     print(f"Finished exporting data at {datetime.datetime.now()}")
+
+
+schedule.every(10).seconds.do(ping)
 while True:
     schedule.run_pending()
     time.sleep(1)
